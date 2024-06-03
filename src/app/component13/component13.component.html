@@ -1,0 +1,36 @@
+<form [formGroup]="formulario">
+  <input type="number" class="form-control" formControlName="id" readonly >
+  <input type="text"   class="form-control" formControlName="placa" placeholder="Placa">
+  <input type="text" class="form-control" formControlName="modelo" placeholder="Modelo">
+  <input type="text" class="form-control" formControlName="cor" placeholder="Cor">
+  <input type="number" class="form-control" formControlName="car_year" placeholder="Ano">
+
+  <input type="button" mat-raised-button color="primary" value="Cadastrar" *ngIf="btnCadastrar" (click)="cadastrarCar()">
+  <input type="button" class="btn btn-primary" value="Alterar" *ngIf="!btnCadastrar" (click)="alterar()">
+  <input type="button" class="btn btn-primary" value="Remover" *ngIf="!btnCadastrar" (click)="remover()">
+</form>
+
+<!-- TABELA -->
+<table class="table table-striped">
+  <thead>
+      <tr>
+          <th>#</th>
+          <th>Placa</th>
+          <th>Modelo</th>
+          <th>Cor</th>
+          <th>Ano</th>
+          <th>Selecionar</th>
+      </tr>
+  </thead>
+
+  <tbody>
+      <tr *ngFor="let c of cars; let indice = index">
+          <td>{{indice+1}}</td>
+          <td>{{c.placa}}</td>
+          <td>{{c.modelo}}</td>
+          <td>{{c.cor}}</td>
+          <td>{{c.car_year}}</td>
+          <td><button class="btn btn-primary" (click)="selecionarCar(indice)">Selecionar</button></td>
+      </tr>
+  </tbody>
+</table>

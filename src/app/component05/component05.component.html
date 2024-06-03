@@ -1,0 +1,11 @@
+@if(media >= 7) {
+  <p>Aprovado(a)</p>
+}@else if (media >= 5) {
+  <p>Em exame</p>
+}@else {
+  <p>Reprovado(a)</p>
+}
+
+@for (nome of nomes; track $index) {
+  <p>{{$index}} - {{nome}}</p>
+}
