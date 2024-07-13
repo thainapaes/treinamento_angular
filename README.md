@@ -1,6 +1,6 @@
 # AngularBasico
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
+Objetivo do projeto é aprender um pouco mais sobre a tecnologia Angular na versão 18.0.2
 
 ## Development server
 
